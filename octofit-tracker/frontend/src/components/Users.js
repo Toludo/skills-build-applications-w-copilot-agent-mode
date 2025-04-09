@@ -6,7 +6,7 @@ function Users() {
 
   useEffect(() => {
     // Fetch users from the Django REST API endpoint
-    axios.get('/api/users/')
+    axios.get('/octofit-tracker/api/users/')
       .then(response => {
         setUsers(response.data);
       })

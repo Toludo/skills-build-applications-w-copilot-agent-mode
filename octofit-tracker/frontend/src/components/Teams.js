@@ -5,7 +5,7 @@ function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('/api/teams')
+    fetch('/octofit-tracker/api/teams')
       .then(response => response.json())
       .then(data => setTeams(data));
   }, []);

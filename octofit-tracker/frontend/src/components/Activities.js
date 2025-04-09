@@ -5,7 +5,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('/api/activities')
+    fetch('/octofit-tracker/api/activities')
       .then(response => response.json())
       .then(data => setActivities(data));
   }, []);
