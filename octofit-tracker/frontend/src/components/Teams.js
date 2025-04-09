@@ -5,7 +5,7 @@ function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('https://refactored-space-broccoli-grxpg7v9j9rhwgrr-8000.app.github.dev/api/teams')
+    fetch('/api/teams')
       .then(response => response.json())
       .then(data => setTeams(data));
   }, []);

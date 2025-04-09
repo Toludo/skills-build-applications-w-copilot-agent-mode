@@ -5,7 +5,7 @@ function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch('https://refactored-space-broccoli-grxpg7v9j9rhwgrr-8000.app.github.dev/api/leaderboard')
+    fetch('/api/leaderboard')
       .then(response => response.json())
       .then(data => setLeaderboard(data));
   }, []);

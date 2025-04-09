@@ -5,7 +5,7 @@ function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    fetch('https://refactored-space-broccoli-grxpg7v9j9rhwgrr-8000.app.github.dev/api/workouts')
+    fetch('/api/workouts')
       .then(response => response.json())
       .then(data => setWorkouts(data));
   }, []);

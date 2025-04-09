@@ -5,7 +5,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://refactored-space-broccoli-grxpg7v9j9rhwgrr-8000.app.github.dev/api/activities')
+    fetch('/api/activities')
       .then(response => response.json())
       .then(data => setActivities(data));
   }, []);
