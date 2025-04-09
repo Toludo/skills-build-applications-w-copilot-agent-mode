@@ -5,9 +5,10 @@ function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('/octofit-tracker/api/teams')
+    fetch('https://refactored-space-broccoli-grxpg7v9j9rhwgrr-8000.app.github.dev/api/teams')
       .then(response => response.json())
-      .then(data => setTeams(data));
+      .then(data => setTeams(data))
+      .catch(error => console.error('Error fetching teams:', error));
   }, []);
 
   return (

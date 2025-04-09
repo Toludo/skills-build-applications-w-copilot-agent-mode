@@ -5,9 +5,10 @@ function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    fetch('/octofit-tracker/api/workouts')
+    fetch('https://refactored-space-broccoli-grxpg7v9j9rhwgrr-8000.app.github.dev/api/workouts')
       .then(response => response.json())
-      .then(data => setWorkouts(data));
+      .then(data => setWorkouts(data))
+      .catch(error => console.error('Error fetching workouts:', error));
   }, []);
 
   return (

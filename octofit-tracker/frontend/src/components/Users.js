@@ -5,22 +5,17 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    // Fetch users from the Django REST API endpoint
-    axios.get('/octofit-tracker/api/users/')
-      .then(response => {
-        setUsers(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching users:', error);
-      });
+    axios.get('https://refactored-space-broccoli-grxpg7v9j9rhwgrr-8000.app.github.dev/api/users')
+      .then(response => setUsers(response.data))
+      .catch(error => console.error('Error fetching users:', error));
   }, []);
 
   return (
-    <div>
-      <h1>Users</h1>
-      <ul>
+    <div className="container mt-4">
+      <h1 className="text-center mb-4">Users</h1>
+      <ul className="list-group">
         {users.map(user => (
-          <li key={user.id}>{user.name}</li>
+          <li key={user.id} className="list-group-item">{user.name}</li>
         ))}
       </ul>
     </div>
